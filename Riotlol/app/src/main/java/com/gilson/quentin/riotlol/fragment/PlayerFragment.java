@@ -3,13 +3,19 @@ package com.gilson.quentin.riotlol.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gilson.quentin.riotlol.R;
+import com.gilson.quentin.riotlol.model.Match;
+import com.gilson.quentin.riotlol.model.PlayerResult;
+import com.gilson.quentin.riotlol.model.RecentMatchResult;
 import com.gilson.quentin.riotlol.request.RiotRequest;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,7 +24,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlayerFragment extends Fragment implements RiotRequest.PlayerInfoListener {
+public class PlayerFragment extends Fragment implements RiotRequest.PlayerInfoListener, RiotRequest.RecentMatchListener {
 
 
     @BindView(R.id.textviewtest)
@@ -48,8 +54,18 @@ public class PlayerFragment extends Fragment implements RiotRequest.PlayerInfoLi
     }
 
     @Override
-    public void didReceivePlayerInfo(String name) {
-        textviewtest.setText(name);
+    public void didReceivePlayerInfo(PlayerResult result) {
+        textviewtest.setText(result.getName());
+        String accountId = String.valueOf(result.getAccountId());
+        RiotRequest.getRecentMatch(this,accountId);
+    }
+
+    @Override
+    public void didReceiveRecentMatch(RecentMatchResult result) {
+        List<Match> allMatch = result.getMatches();
+        for(Match match : allMatch){
+            Log.d("recentmatch",match.getLane());
+        }
     }
 
     @Override

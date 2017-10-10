@@ -11,6 +11,7 @@ public class PlayerResult {
 
     private int profileIconId;
     private String name;
+    private long accountId;
 
     public PlayerResult() {
     }
@@ -29,5 +30,13 @@ public class PlayerResult {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(long accountId) {
+        this.accountId = accountId;
     }
 }
