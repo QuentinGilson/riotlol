@@ -1,11 +1,13 @@
 package com.gilson.quentin.riotlol.adapter;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.gilson.quentin.riotlol.fragment.LiveGameFragment;
 import com.gilson.quentin.riotlol.fragment.PlayerFragment;
+import com.gilson.quentin.riotlol.fragment.SearchFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,15 +20,19 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> allFragment;
     private String[] allTitles;
+    private TabLayout tabLayout;
 
-    public PagerAdapter(FragmentManager fm) {
+    public PagerAdapter(FragmentManager fm, TabLayout tabLayout) {
         super(fm);
 
+        this.tabLayout = tabLayout;
+
         allFragment = new ArrayList<>();
+        allFragment.add(SearchFragment.newInstance(tabLayout));
         allFragment.add(PlayerFragment.newInstance());
         allFragment.add(LiveGameFragment.newInstance());
 
-        allTitles = new String[]{"info","live"};
+        allTitles = new String[]{"search","info","live"};
     }
 
     @Override
@@ -41,7 +47,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-
         return allTitles[position];
     }
 }

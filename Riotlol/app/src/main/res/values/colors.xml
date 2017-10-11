@@ -6,5 +6,7 @@
     <color name="myWhite">#ffffff</color>
     <color name="myBlack">#000000</color>
     <color name="myBlue">#4c71b4</color>
+    <color name="winGreen">#378737</color>
+    <color name="loseRed">#841c1c</color>
 
 </resources>

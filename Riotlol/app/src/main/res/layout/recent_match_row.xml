@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_layout_recent_match"
+    android:background="@color/myWhite">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myWhite">
+
+            <TextView
+                android:id="@+id/textview_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack" />
+
+            <TextView
+                android:id="@+id/textview_kda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_toRightOf="@+id/imageview_summoner_spell1"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/textview_gametype"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textview_gametype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textview_gamecreation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_toRightOf="@id/textview_gametype"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/textview_gameduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_toRightOf="@id/textview_gamecreation"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/textview_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_below="@+id/textview_level"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageview_summoner_spell1"/>
+
+            <TextView
+                android:id="@+id/textview_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_below="@+id/textview_cs"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageview_summoner_spell1"/>
+
+            <TextView
+                android:id="@+id/textview_cs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"
+                android:layout_below="@id/textview_kda"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imageview_summoner_spell1"/>
+
+            <TextView
+                android:id="@+id/textview_champion_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myBlack"/>
+
+            <ImageView
+                android:id="@+id/imageview_champion"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_below="@+id/textview_gametype"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageview_summoner_spell1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textview_gametype"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageview_champion"
+                android:layout_marginLeft="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageview_summoner_spell2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/imageview_champion"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/imageview_summoner_spell1"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/imageview_champion">
+
+                <ImageView
+                    android:id="@+id/imageview_item0"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <ImageView
+                    android:id="@+id/imageview_item1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imageview_item2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imageview_item3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imageview_item4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imageview_item5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/imageview_item6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
